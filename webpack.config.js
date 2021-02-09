@@ -31,7 +31,19 @@ module.exports = {
                 use: [
                   "style-loader",
                   "css-loader"
-                ]
+                ]	     
+            },
+                {
+                    test: /\.(woff(2)?|ttf|svg|eot)$/,
+                    use: [
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                outputPath: 'fonts/',
+                                publicPath: 'fonts/' 
+                            }
+                        }
+                    ]
             }
         ]
     },
