@@ -55,4 +55,11 @@ module.exports = {
         })),
         new CleanWebpackPlugin(),
     ],
+
+    devServer: {
+        contentBase: path.join(__dirname, 'dist/pages'),
+        compress: true,
+        writeToDisk:true,
+        port: 8080,
+    },
 }
